@@ -22,7 +22,7 @@
     font-family: "Segoe UI", "Trebuchet MS", system-ui, sans-serif;
     color: var(--cream);
     background: linear-gradient(135deg, #7a1b57, #c2337a 45%, #ff7aa2);
-    overflow: hidden;
+    overflow-y: auto;
   }
 
   /* soft glow blobs */
@@ -145,7 +145,15 @@
     to { transform: translateY(105vh) rotate(540deg); opacity: 0; }
   }
 
-  @media (prefers-reduced-motion: reduce) {
+  
+  @media (max-width: 480px) {
+    .cake { font-size: 56px; }
+    body::before, body::after { width: 60vmax; height: 60vmax; opacity: .25; }
+    .card { padding: 32px 20px; border-radius: 20px; }
+    h1 { margin: 12px 0 4px; }
+    .wish { font-size: 1rem; }
+  }
+@media (prefers-reduced-motion: reduce) {
     * { animation: none !important; }
   }
 </style>
